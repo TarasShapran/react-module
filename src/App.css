@@ -1,0 +1,6 @@
+.App{
+    display: grid;
+    grid-template-columns: repeat(2,30%);
+    justify-content: space-evenly;
+    margin: 20px 0;
+}
