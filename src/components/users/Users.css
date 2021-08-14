@@ -1,0 +1,13 @@
+.wrap{
+    display: flex;
+
+}
+.wrap > div{
+    width: 50%;
+}
+.usersBox{
+    background: tomato;
+}
+.userInfo{
+    background: cornsilk;
+}
