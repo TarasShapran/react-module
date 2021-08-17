@@ -6,3 +6,4 @@ export default function Post({post , infoOfPost}) {
     </div>
   );
 }
+

@@ -1,7 +1,8 @@
-export default function Comment() {
+export default function Comment({comment,infoOfComments}) {
   return (
     <div>
-    Comment
+      {comment.id} - {comment.body}
+      <button onClick={() =>infoOfComments(comment) }> details</button>
 
     </div>
   );

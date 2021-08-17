@@ -8,6 +8,12 @@
 .postsBox{
     background: teal;
 }
-.post{
+.post , .comments{
     background: tomato;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
 }
