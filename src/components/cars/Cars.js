@@ -8,6 +8,7 @@ export default function Cars() {
     let [model, setModel] = useState('kia');
     let [price, setPrice] = useState('6000');
     let [year, setYear] = useState('2010');
+    let [carID, setCarId] = useState(null);
 
     let onModelChange = (e) => {
         setModel(e.target.value);
@@ -25,12 +26,13 @@ export default function Cars() {
     };
     let edit = (e) => {
         e.preventDefault();
-        editCar({model: model, price: price, year: year})
+        editCar(carID,{model: model, price: price, year: year})
     };
     let update=(car)=>{
         setModel(car.model);
         setPrice(car.price);
         setYear(car.year);
+        setCarId(car.id)
         //editCar(id);
     }
 
@@ -41,20 +43,20 @@ export default function Cars() {
     })
 
     let deleteCar = (id) => {
-        return deleteCarById(id);
         let filterCarArray = cars.filter(value => value.id !== id);
         setCars([...filterCarArray]);
+        return deleteCarById(id);
 
     }
     return (
         <div>
             <div>
-                <form >
+                <form onSubmit={edit}  >
                     <input type="text" name={'model'} value={model} onChange={onModelChange}/>
                     <input type="text" name={'price'} value={price} onChange={onPriceChange}/>
                     <input type="text" name={'year'} value={year} onChange={onYearChange}/>
-                    <input type="submit" value={'save'} onSubmit={save}/>
-                    <input type="submit" value={'update'} onSubmit={edit} />
+                    <input type="submit" value={'save'} />
+                    <input type="submit" value={'update'} />
                 </form>
             </div>
             <div className={"cars"}>

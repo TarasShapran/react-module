@@ -9,8 +9,8 @@ const saveCar = (car) => {
         .then((response) => response.json())
         .then((json) => console.log(json));
 }
-const editCar = (car ) => {
-    fetch('http://195.72.146.25/api/v1/cars/'+car.id, {
+const editCar = (id,car ) => {
+    fetch('http://195.72.146.25/api/v1/cars/'+id, {
         method: 'PUT',
         body: JSON.stringify(car),
         headers: {
