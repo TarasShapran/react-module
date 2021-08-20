@@ -1,3 +1,4 @@
+/*
 import Cars from "../cars/Cars";
 import {saveCar} from "../../services/car.api.service";
 import {useState} from "react";
@@ -37,4 +38,4 @@ export default function Form() {
             <Cars/>
         </div>
     );
-}
+}*/

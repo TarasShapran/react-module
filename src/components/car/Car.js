@@ -1,7 +1,7 @@
 import './Car.css'
 
 
-export default function Car({car,deleteCar}) {
+export default function Car({car,deleteCar ,update}) {
     return (
         <div className={'wrap'}>
             <div className={"car"}>
@@ -20,7 +20,7 @@ export default function Car({car,deleteCar}) {
                 </div>
                 <div>
                     <button onClick={() => {
-
+                        update(car)
                     }}>update
                     </button>
                 </div>
