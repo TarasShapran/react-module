@@ -5,7 +5,7 @@ import "./Cars.css"
 
 export default function Cars() {
     let [cars, setCars] = useState([]);
-    let [formInput, setFormInput] = useState({model: 'audi', price: '1000', year: '2000'});
+    let [formInput, setFormInput] = useState({model: 'audi', price: '30000', year: '2020'});
 
     useEffect(() => {
         getAllCars().then(value => setCars(value))
