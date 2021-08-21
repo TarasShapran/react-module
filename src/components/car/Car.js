@@ -20,7 +20,7 @@ export default function Car({car,deleteCar ,update}) {
                 </div>
                 <div>
                     <button onClick={() => {
-                        update(car)
+                        update(car.id)
                     }}>update
                     </button>
                 </div>

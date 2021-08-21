@@ -1,5 +1,9 @@
+const url ='http://91.201.233.14/api/v1/cars'
+
+
+
 const saveCar = (car) => {
-    fetch(' http://195.72.146.25/api/v1/cars', {
+    fetch(url, {
         method: 'POST',
         body: JSON.stringify(car),
         headers: {
@@ -10,7 +14,7 @@ const saveCar = (car) => {
         .then((json) => console.log(json));
 }
 const editCar = (id,car ) => {
-    fetch('http://195.72.146.25/api/v1/cars/'+id, {
+    fetch(url+'/'+id, {
         method: 'PUT',
         body: JSON.stringify(car),
         headers: {
@@ -23,10 +27,10 @@ const editCar = (id,car ) => {
 
 
 const getAllCars = () => {
-    return fetch("http://195.72.146.25/api/v1/cars").then(value => value.json())
+    return fetch(url).then(value => value.json())
 }
 const deleteCarById = (id) => {
-    return  fetch('http://195.72.146.25/api/v1/cars/'+id, {
+    return  fetch(url+'/'+id, {
         method: 'DELETE',
     });
 }
