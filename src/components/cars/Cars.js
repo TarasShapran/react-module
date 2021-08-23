@@ -9,15 +9,15 @@ export default function Cars() {
         getAllCars().then(value => setCars(value))
     },[])
 
-    let deleteCar = (id) => {
+/*    let deleteCar = (id) => {
         deleteCarById(id);
         setCars(cars.filter(value => value.id !== id));
-    }
+    }*/
 
     return (
         <div>
             {
-                cars.map(value => <Car key={value.id} item={value} deleteCar={deleteCar}/>)
+                cars.map(value => <Car key={value.id} item={value} /*deleteCar={deleteCar}*//>)
             }
 
         </div>

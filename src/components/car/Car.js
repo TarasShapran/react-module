@@ -1,10 +1,10 @@
-export default function Car({item ,deleteCar}) {
+export default function Car({item /*,deleteCar*/}) {
   return (
     <div>
         {item.id} - {item.model} - {item.price}
-<button onClick={() => {
+{/*<button onClick={() => {
   deleteCar(item.id);
-}} >delete</button>
+}} >delete</button>*/}
     </div>
   );
 }
