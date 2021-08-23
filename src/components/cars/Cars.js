@@ -9,7 +9,7 @@ export default function Cars() {
 
     useEffect(() => {
         getAllCars().then(value => setCars(value))
-    }, [])
+    }, [cars])
 
     let onChangeInputForm = (e) => setFormInput({...formInput, [e.target.name]: e.target.value})
 
@@ -26,7 +26,9 @@ export default function Cars() {
     }
 
     let onEditCar=(id)=>{
-        editCar(id,formInput)};
+        editCar(id,formInput)
+
+    };
 
 
     return (
