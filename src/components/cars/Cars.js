@@ -5,11 +5,12 @@ import "./Cars.css"
 
 export default function Cars() {
     let [cars, setCars] = useState([]);
-    let [formInput, setFormInput] = useState({model: 'audi', price: '30000', year: '2020'});
+    let [flag, setFlag] = useState(true);
+    let [formInput, setFormInput] = useState({model: 'volkswagen', price: '4000', year: '2011'});
 
     useEffect(() => {
         getAllCars().then(value => setCars(value))
-    }, [cars])
+    }, [flag])
 
     let onChangeInputForm = (e) => setFormInput({...formInput, [e.target.name]: e.target.value})
 
@@ -26,9 +27,13 @@ export default function Cars() {
     }
 
     let onEditCar=(id)=>{
-        editCar(id,formInput)
 
+        editCar(id,formInput);
+        setFlag(!flag);
     };
+
+
+
 
 
     return (
