@@ -2,9 +2,9 @@ import Car from "../car/Car";
 import {createCar, deleteCar, getCars} from "../../services/car.api";
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
-import {get_Cars, pushCars} from "../../redux/actions";
+import {get_Cars, pushCar} from "../../redux/actions";
 import Form from "../form/Form";
-import {delete_Cars} from "../../redux/actions/actions";
+import {delete_Car} from "../../redux/actions/actions";
 
 export default function Cars() {
     let {cars} = useSelector(state => state);
@@ -22,14 +22,14 @@ export default function Cars() {
             year: e.target.year.value
         };
         createCar(car)
-            .then(value => dispatch(pushCars(value)))
+            .then(value => dispatch(pushCar(value)))
     }
 
     let onDeleteCar = (car) => {
 
         deleteCar(car.id);
 
-        dispatch(delete_Cars(car))
+        dispatch(delete_Car(car))
 
     }
     return (
