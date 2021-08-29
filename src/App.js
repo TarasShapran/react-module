@@ -1,11 +1,17 @@
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
+import Cars from "./components/cars/Cars";
 
-    </div>
-  );
+
+export default function App() {
+
+    return (
+        <div className="App">
+
+            <Cars/>
+
+        </div>
+    );
 }
 
-export default App;
+
