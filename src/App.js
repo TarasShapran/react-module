@@ -42,7 +42,7 @@ export default function App() {
 
             {
                 users.map((value) => <div key={value.id}>
-                    {value.id} - {value.name} - {value.username}</div>)
+                    {value.id} - {value.name} - {value.username} - {value.email}</div>)
             }
         </div>
     );
